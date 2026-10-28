@@ -34,8 +34,7 @@ BrandLens provides a simple platform where content creators can check their draf
 
 ## 🔗 Project Links
 - **Live Demo:** https://brandlens-rehan.netlify.app
-- **GitHub Repository:** [Add your repository link]
-- **Project PDF:** [Add your PDF link, if required]
+- **GitHub Repository:** https://github.com/Rehan1109/BrandLens
 
 ## 🔮 Future Improvements
 - Edit and resubmit content after feedback.
@@ -48,4 +47,3 @@ A hackathon project focused on improving brand consistency and simplifying conte
 
 ---
 *BrandLens — Check before you publish.*
-# BrandLens
