@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Manager | BrandLens</title>
+    <link rel="stylesheet" href="brand.css">
+</head>
+
+<body>
+    <header class="topbar">
+        <a class="brand" href="index.html">
+            <span class="brand-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none">
+                    <rect x="3" y="3" width="42" height="42" rx="13" fill="currentColor" />
+                    <circle cx="21" cy="20" r="8" stroke="white" stroke-width="3.5" />
+                    <path d="m27 26 7 7" stroke="white" stroke-width="3.5" stroke-linecap="round" />
+                </svg>
+            </span>
+            <span>BrandLens</span>
+        </a>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a class="current" href="brand.html">Brand Manager</a>
+            <a href="creator.html">Content Creator</a>
+        </nav>
+        <div class="profile"><span>RA</span></div>
+    </header>
+
+    <main>
+        <section class="page-heading">
+            <p class="eyebrow">Brand workspace</p>
+            <div class="heading-row">
+                <h1>Brand Management</h1>
+                <span class="active-label">● Brand Rules Active</span>
+            </div>
+            <p>Define your brand rules, manage approved product information, and review content to keep every message on
+                brand.</p>
+        </section>
+
+        <section class="stats" aria-label="Brand overview">
+            <article class="card stat"><span class="stat-icon">⊘</span>
+                <div><strong>3</strong><b>Prohibited Terms</b><small>Words to avoid</small></div>
+            </article>
+            <article class="card stat"><span class="stat-icon">☷</span>
+                <div><strong>2</strong><b>Approved Values</b><small>Your source of truth</small></div>
+            </article>
+            <article class="card stat"><span class="stat-icon">▤</span>
+                <div><strong>2</strong><b>Pending Reviews</b><small>Awaiting your decision</small></div>
+            </article>
+        </section>
+
+        <section class="card guidelines">
+            <div class="section-title">
+                <h2>Brand Guidelines</h2>
+                <p>Set the rules every creator must follow.</p>
+            </div>
+            <div class="guideline-columns">
+                <section>
+                    <h3>Prohibited Terms</h3>
+                    <p>Keep restricted language out of your content.</p>
+                    <label for="restricted-word">Restricted word or phrase</label>
+                    <div class="input-row">
+                        <input id="restricted-word" type="text" placeholder="Enter a restricted word or phrase">
+                        <button type="button">＋ Add Term</button>
+                    </div>
+                    <div class="tags"></div>
+                    <small class="help">Checks look for these terms in every submission.</small>
+                </section>
+                <section>
+                    <h3>Approved Values</h3>
+                    <p>Set the facts creators can confidently use.</p>
+                    <div class="value-inputs">
+                        <label>Field name<input type="text" placeholder="e.g. Pro Plan Price"></label>
+                        <label>Approved value<input type="text" placeholder="e.g. ₹999"></label>
+                    </div>
+                    <button type="button">＋ Add Approved Value</button>
+                    <div class="value-table">
+                        <div class="table-head"><b>FIELD</b><b>APPROVED VALUE</b></div>
+                        <div><span>Pro Plan Price</span><strong>₹999</strong><span>✎　⌫</span></div>
+                        <div><span>Free Trial Duration</span><strong>7 days</strong><span>✎　⌫</span></div>
+                    </div>
+                </section>
+            </div>
+            <div class="save-row">
+                <small>Rule changes save automatically and apply to reviews.</small>
+                <button type="button">▣ Save Brand Rules</button>
+            </div>
+        </section>
+
+        <section class="queue">
+            <div class="queue-heading">
+                <div>
+                    <h2>Content Review Queue <span class="pending-count">2 pending</span></h2>
+                    <p>Review marketing content submitted by creators.</p>
+                </div>
+            </div>
+            <div class="card queue-table">
+                <div class="queue-head">
+                    <span>SUBMISSION</span><span>SUBMITTED</span><span>COMPLIANCE</span><span></span>
+                </div>
+                <article class="queue-item">
+                    <div class="submission"><span class="file-icon">▤</span>
+                        <div><strong>Summer Promotion</strong><small>Creator 01</small></div>
+                    </div>
+                    <span class="date">24 Oct 2026</span><span class="status needs-changes">Needs Changes</span>
+                    <a class="review-button" href="#review-modal">Review Content</a>
+                </article>
+                <article class="queue-item">
+                    <div class="submission"><span class="file-icon">▤</span>
+                        <div><strong>New Product Announcement</strong><small>Creator 02</small></div>
+                    </div>
+                    <span class="date">24 Oct 2026</span><span class="status ready">Ready for Review</span>
+                    <a class="review-button" href="#review-modal">Review Content</a>
+                </article>
+                <article class="queue-item">
+                    <div class="submission"><span class="file-icon">▧</span>
+                        <div><strong>Weekly Social Post</strong><small>Creator 03</small></div>
+                    </div>
+                    <span class="date">23 Oct 2026</span><span class="status approved">Approved</span>
+                    <a class="review-button" href="#review-modal">Review Content</a>
+                </article>
+            </div>
+            <small class="note" id="queue-message" aria-live="polite">ⓘ Automated checks assist. You make the final decision.</small>
+        </section>
+    </main>
+
+    <section class="modal" id="review-modal" aria-label="Review Summer Promotion">
+        <a class="modal-backdrop" href="#" aria-label="Close review"></a>
+        <article class="dialog">
+            <header class="dialog-header">
+                <a class="close" href="#" aria-label="Close">×</a>
+                <p class="eyebrow">Content review</p>
+                <div class="heading-row">
+                    <h2>Summer Promotion</h2><span class="status needs-changes">Needs Changes</span>
+                </div>
+                <p>Creator 01 ・ Submitted 24 Oct 2026</p>
+            </header>
+            <div class="dialog-content">
+                <h3>Submitted marketing text</h3>
+                <p class="submitted-copy">Get our cheapest Pro Plan for ₹799. Enjoy a 14-day free trial with guaranteed
+                    results.</p>
+                <div class="issues-heading">
+                    <h3>Issues to review</h3><span>⚠ 4 detected issues</span>
+                </div>
+                <div class="issues">
+                    <article><b>!</b>
+                        <div><strong>“cheapest”</strong>
+                            <p>Brand rule: do not use “cheapest”.</p><small>Remove this restricted price claim.</small>
+                        </div><small>Prohibited term</small>
+                    </article>
+                    <article><b>!</b>
+                        <div><strong>“guaranteed”</strong>
+                            <p>Brand rule: do not use “guaranteed”.</p><small>Avoid promising a guaranteed
+                                outcome.</small>
+                        </div><small>Prohibited term</small>
+                    </article>
+                    <article><b>!</b>
+                        <div><strong>Pro Plan Price</strong>
+                            <p>Submitted: ₹799　→　Approved: ₹999</p><small>The submitted price does not match the
+                                approved plan price.</small>
+                        </div><small>Value mismatch</small>
+                    </article>
+                    <article><b>!</b>
+                        <div><strong>Free Trial Duration</strong>
+                            <p>Submitted: 14 days　→　Approved: 7 days</p><small>The trial is longer than the approved
+                                duration.</small>
+                        </div><small>Value mismatch</small>
+                    </article>
+                </div>
+                <label for="feedback">Manager feedback <small>(optional)</small></label>
+                <textarea id="feedback" placeholder="Add guidance for the creator..."></textarea>
+                <p class="info">ⓘ Automated checks assist; the brand manager makes the final decision. Review the issues
+                    before approving or requesting changes.</p>
+            </div>
+            <footer class="dialog-actions">
+                <a class="review-button" href="#">Cancel</a>
+                <div><a class="request-button" href="#">Request Changes</a><a class="approve-button" href="#">✓ Approve
+                        Content</a></div>
+            </footer>
+        </article>
+    </section>
+    <script src="brandlens-data.js"></script>
+    <script src="brand.js"></script>
+</body>
+
+</html>

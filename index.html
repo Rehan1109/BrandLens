@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description"
+        content="Keep every message on brand. BrandLens helps teams catch brand-rule violations and check approved facts and prices.">
+    <title>BrandLens — Every message. On brand.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="nav-shell">
+            <a class="brand" href="#" aria-label="BrandLens home">
+                <span class="brand-mark" aria-hidden="true">
+                    <svg viewBox="0 0 48 48" fill="none">
+                        <rect x="3" y="3" width="42" height="42" rx="13" fill="currentColor" />
+                        <circle cx="21" cy="20" r="8" stroke="white" stroke-width="3.5" />
+                        <path d="m27 26 7 7" stroke="white" stroke-width="3.5" stroke-linecap="round" />
+                    </svg>
+                </span>
+                <span>BrandLens</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="#about">About</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#benefits">Benefits</a>
+                <a href="brand.html">Brand Manager</a>
+                <a href="creator.html">Content Creator</a>
+            </nav>
+            <a class="button button-primary nav-cta" href="#content-creator">Try BrandLens <span
+                    aria-hidden="true">→</span></a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="about">
+            <div class="hero-content">
+                <p class="eyebrow"><span class="eyebrow-dot"></span> Brand governance, simplified</p>
+                <h1>Every message.<br><span>On brand.</span></h1>
+                <p class="hero-copy">BrandLens helps your team catch brand-rule violations, verify approved facts and
+                    prices, and create marketing content with greater confidence.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="creator.html">Check Your Content <span
+                            aria-hidden="true">→</span></a>
+                    <a class="button button-secondary" href="#how-it-works">Explore How It Works <span
+                            aria-hidden="true">→</span></a>
+                </div>
+                <p class="hero-note">
+                    <span class="avatar-stack" aria-hidden="true"><i></i><i></i><i></i></span>
+                    Built for brand teams, marketers, and content creators.
+                </p>
+            </div>
+
+            <div class="review-window" id="content-creator">
+                <div class="window-top">
+                    <div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+                    <span>Content review</span>
+                    <span class="user-avatar">AM</span>
+                </div>
+                <div class="campaign-bar">
+                    <div><span class="field-label">Campaign</span><strong>Pro Plan launch</strong></div>
+                    <span class="status-pill status-warn">Needs Changes</span>
+                </div>
+                <div class="review-grid">
+                    <div class="draft-panel">
+                        <div class="panel-heading"><strong>Marketing copy</strong><span>Draft</span></div>
+                        <label class="sr-only" for="draft-copy">Marketing copy to check</label>
+                        <textarea id="draft-copy"
+                            spellcheck="false">Get the cheapest Pro Plan today for just ₹799!</textarea>
+                        <button class="button button-primary check-button" id="run-check" type="button">
+                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="m12 2 1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8L12 2Z"
+                                    stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                                <path d="m19 15 .9 3.1L23 19l-3.1.9L19 23l-.9-3.1L15 19l3.1-.9L19 15Z"
+                                    fill="currentColor" />
+                            </svg>
+                            Run brand check
+                        </button>
+                    </div>
+                    <div class="findings-panel">
+                        <div class="panel-heading"><strong id="finding-count">2 findings</strong><span
+                                id="rules-checked">5 rules
+                                checked</span></div>
+                        <div class="finding-list" id="finding-list" aria-live="polite">
+                            <article class="finding finding-danger">
+                                <span class="finding-icon">!</span>
+                                <div><strong>Prohibited phrase</strong>
+                                    <p>“cheapest” is not approved brand language. Remove or replace it.</p>
+                                </div>
+                            </article>
+                            <article class="finding finding-warning">
+                                <span class="finding-icon">!</span>
+                                <div><strong>Price mismatch</strong>
+                                    <p>₹799 differs from the approved Pro Plan price of <b>₹999</b>.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="active-rules">
+                    <strong><span aria-hidden="true">☷</span> Active rules</strong>
+                    <div id="active-rule-list"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="capability-strip" aria-label="Core capabilities">
+            <div class="capability"><span class="cap-icon">✓</span>Consistent brand messaging</div>
+            <div class="capability"><span class="cap-icon">₹</span>Approved facts and pricing</div>
+            <div class="capability"><span class="cap-icon">⌕</span>Explainable content checks</div>
+            <div class="capability"><span class="cap-icon">♡</span>Human-controlled review</div>
+        </section>
+
+        <section class="section about-section">
+            <div class="section-inner about-grid">
+                <div class="section-copy">
+                    <p class="eyebrow">Why BrandLens?</p>
+                    <h2>One small mistake can change the message.</h2>
+                    <p>Brand communication gets harder to manage as more people create content across more channels.
+                        BrandLens gives every team one clear reference point.</p>
+                    <ul class="check-list">
+                        <li><span>✓</span>Inconsistent language across teams</li>
+                        <li><span>✓</span>Off-brand or prohibited phrases</li>
+                        <li><span>✓</span>Outdated prices and product facts</li>
+                        <li><span>✓</span>Slow, repetitive manual reviews</li>
+                        <li><span>✓</span>Unclear feedback for creators</li>
+                    </ul>
+                </div>
+                <div class="source-visual" aria-label="Different marketing messages connected to one source of truth">
+                    <div class="message-card message-one"><span class="message-icon">✉</span>
+                        <div><small>Email campaign</small>
+                            <p>Our <mark>lowest-ever</mark> price: <mark>₹799</mark></p>
+                        </div>
+                    </div>
+                    <div class="message-card message-two"><span class="message-icon">◉</span>
+                        <div><small>Social post</small>
+                            <p>Get Pro for only <mark>₹899</mark></p>
+                        </div>
+                    </div>
+                    <div class="message-card message-three"><span class="message-icon">▤</span>
+                        <div><small>Landing page</small>
+                            <p>The <mark>cheapest</mark> plan for teams</p>
+                        </div>
+                    </div>
+                    <div class="connector" aria-hidden="true"></div>
+                    <div class="truth-card">
+                        <span class="truth-icon">⌕</span>
+                        <span class="field-label">One source of truth</span>
+                        <strong>Brand rules</strong>
+                        <span class="truth-rule"><i class="rule-dot red"></i>Avoid “cheapest”</span>
+                        <span class="truth-rule"><i class="rule-dot green"></i>Pro Plan · ₹999</span>
+                        <span class="truth-rule"><i class="rule-dot purple"></i>Approved claims</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section features-section" id="benefits">
+            <div class="section-inner">
+                <div class="section-heading">
+                    <p class="eyebrow">What we do</p>
+                    <h2>Everything your team needs to stay on brand.</h2>
+                    <p>Turn static guidelines into clear, practical checks your whole team can use.</p>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature-card" id="brand-manager">
+                        <div class="mini-ui rules-ui">
+                            <div class="mini-ui-heading"><strong>Brand rules</strong><span>+ Add rule</span></div>
+                            <div class="mini-rule"><span class="mini-symbol">Aa</span><span><b>Prohibited
+                                        term</b><small>cheapest</small></span><i class="rule-dot red"></i></div>
+                            <div class="mini-rule"><span class="mini-symbol">₹</span><span><b>Approved
+                                        price</b><small>Pro Plan · ₹999</small></span><i class="rule-dot green"></i>
+                            </div>
+                            <div class="mini-rule"><span class="mini-symbol">✓</span><span><b>Approved
+                                        fact</b><small>Includes 10 seats</small></span><i class="rule-dot purple"></i>
+                            </div>
+                        </div>
+                        <span class="step-number">01</span>
+                        <h3>Define Brand Rules</h3>
+                        <p>Give your team clear guidelines to follow across prohibited terms, approved prices, and
+                            product facts.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="mini-ui draft-ui">
+                            <span class="field-label">Draft copy</span>
+                            <p>Get the <mark>cheapest</mark> Pro Plan for <mark>₹799</mark>.</p>
+                            <div class="mini-alert"><span>!</span>
+                                <div><b>2 issues found</b><small>Review before continuing</small></div>
+                            </div>
+                        </div>
+                        <span class="step-number">02</span>
+                        <h3>Check Marketing Content</h3>
+                        <p>Catch potential wording, fact, and price issues before content goes live—with a reason for
+                            every flag.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="mini-ui resolved-ui">
+                            <strong><span>✓</span> All findings resolved</strong>
+                            <p>Get the Pro Plan for ₹999.</p>
+                            <a class="button button-primary" href="#content-creator">Run check again <span
+                                    aria-hidden="true">↗</span></a>
+                            <div class="review-ready"><small>Status</small><b>Ready for review <span>✓</span></b></div>
+                        </div>
+                        <span class="step-number">03</span>
+                        <h3>Review and Improve</h3>
+                        <p>Fix issues with confidence, recheck your work, and keep people in control of the final
+                            decision.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section workflow-section" id="how-it-works">
+            <div class="section-inner">
+                <div class="section-heading">
+                    <p class="eyebrow">How it works</p>
+                    <h2>From draft to review-ready in three simple steps.</h2>
+                </div>
+                <div class="workflow-grid">
+                    <article class="workflow-card">
+                        <div class="workflow-top"><span>01</span><span class="workflow-icon">☷</span></div>
+                        <h3>Set the Rules</h3>
+                        <p>The brand manager defines prohibited phrases and approved prices or facts.</p>
+                        <span class="workflow-arrow" aria-hidden="true">↗</span>
+                    </article>
+                    <article class="workflow-card">
+                        <div class="workflow-top"><span>02</span><span class="workflow-icon">⌕</span></div>
+                        <h3>Check the Content</h3>
+                        <p>The creator enters copy. BrandLens checks it against the available rules.</p>
+                        <span class="workflow-arrow" aria-hidden="true">↗</span>
+                    </article>
+                    <article class="workflow-card">
+                        <div class="workflow-top"><span>03</span><span class="workflow-icon">✓</span></div>
+                        <h3>Fix and Review</h3>
+                        <p>The creator reviews explanations, edits, rechecks, and marks the content for review.</p>
+                        <span class="workflow-arrow" aria-hidden="true">↗</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section comparison-section">
+            <div class="section-inner comparison-grid">
+                <div class="comparison-copy">
+                    <p class="eyebrow">See the difference</p>
+                    <h2>Clear feedback.<br>Confident edits.</h2>
+                    <p>Switch between the original and corrected draft to see how a simple review can make brand
+                        guidelines easier to apply.</p>
+                    <div class="comparison-tabs" role="group" aria-label="Comparison view">
+                        <button class="is-active" type="button" data-view="before" aria-pressed="true">Before
+                            BrandLens</button>
+                        <button type="button" data-view="after" aria-pressed="false">After reviewing</button>
+                    </div>
+                    <p class="human-note"><span>ⓘ</span> BrandLens compares content against the rules your team has
+                        defined. Your team reviews the findings and decides what to approve.</p>
+                </div>
+                <div class="comparison-preview" id="comparison-preview">
+                    <div class="comparison-card">
+                        <div class="preview-header"><span>Original draft</span><span
+                                class="status-pill status-warn">Needs changes</span></div>
+                        <p class="preview-copy">Get the <mark>cheapest</mark> Pro Plan for just <mark>₹799</mark>!</p>
+                        <div class="preview-finding"><span>!</span>
+                            <div><strong>Prohibited phrase</strong>
+                                <p>“cheapest” is not approved brand language.</p>
+                            </div>
+                        </div>
+                        <div class="preview-finding price-finding"><span>!</span>
+                            <div><strong>Price mismatch</strong>
+                                <p>Use the approved Pro Plan price: ₹999.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section audience-section">
+            <div class="section-inner">
+                <div class="section-heading">
+                    <p class="eyebrow">Built for the whole team</p>
+                    <h2>Better consistency. Clearer collaboration.</h2>
+                    <p>A shared workflow for the people who define the brand and the people who bring it to life.</p>
+                </div>
+                <div class="audience-grid">
+                    <article class="audience-card"><span class="audience-icon">✳</span>
+                        <h3>For Brand Managers</h3>
+                        <p>Define guidelines once and make them easier for creators to follow.</p><span
+                            class="card-foot">Designed for clarity <b>↗</b></span>
+                    </article>
+                    <article class="audience-card"><span class="audience-icon">▦</span>
+                        <h3>For Marketing Teams</h3>
+                        <p>Catch common wording and pricing inconsistencies earlier in the process.</p><span
+                            class="card-foot">Designed for clarity <b>↗</b></span>
+                    </article>
+                    <article class="audience-card"><span class="audience-icon">✎</span>
+                        <h3>For Content Creators</h3>
+                        <p>Understand what needs to change and why, instead of guessing.</p><span
+                            class="card-foot">Designed for clarity <b>↗</b></span>
+                    </article>
+                    <article class="audience-card"><span class="audience-icon">⌂</span>
+                        <h3>For Businesses</h3>
+                        <p>Create a more consistent brand experience across marketing materials.</p><span
+                            class="card-foot">Designed for clarity <b>↗</b></span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section philosophy-section">
+            <div class="section-inner philosophy-grid">
+                <div>
+                    <p class="eyebrow">Our philosophy</p>
+                    <h2>Great marketing starts with a clear brand.</h2>
+                    <p>Our goal is to make brand guidelines practical, understandable, and easier to follow. BrandLens
+                        connects the rules a company defines with the content its team creates—helping people spot
+                        potential issues, understand them, and make better-informed decisions.</p>
+                </div>
+                <div class="principle-list">
+                    <div><span>01</span><strong>Clarity over confusion</strong></div>
+                    <div><span>02</span><strong>Explainable checks over unexplained flags</strong></div>
+                    <div><span>03</span><strong>Human judgment over automatic approval</strong></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section human-section">
+            <div class="section-inner human-grid">
+                <div class="section-copy">
+                    <p class="eyebrow">Human-controlled by design</p>
+                    <h2>Helpful checks.<br>Human decisions.</h2>
+                    <p>BrandLens identifies potential mismatches against configured rules. It supports the review
+                        process but does not replace human judgment.</p>
+                    <ul class="check-list">
+                        <li><span>✓</span>Findings include explanations.</li>
+                        <li><span>✓</span>Creators can edit and recheck content.</li>
+                        <li><span>✓</span>Final review decisions remain with people.</li>
+                    </ul>
+                </div>
+                <div class="decision-card">
+                    <div class="decision-header"><span>Finding detail</span><span class="status-pill status-warn">Review
+                            needed</span></div>
+                    <div class="decision-alert"><span>!</span>
+                        <div><strong>Price mismatch</strong>
+                            <p>The draft uses ₹799. The configured approved price for Pro Plan is ₹999.</p>
+                        </div>
+                    </div>
+                    <div class="why-card"><span class="why-icon">i</span>
+                        <div><strong>Why this was flagged</strong>
+                            <p>The value in your content doesn’t match the active rule set by your brand manager.</p>
+                        </div>
+                    </div>
+                    <div class="decision-actions"><button type="button">Keep editing</button><button type="button">Mark
+                            for review</button></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section faq-section" id="faq">
+            <div class="section-inner faq-grid">
+                <div class="section-heading">
+                    <p class="eyebrow">Frequently asked questions</p>
+                    <h2>Questions, answered.</h2>
+                    <p>A quick overview of what BrandLens does—and where people stay in control.</p>
+                </div>
+                <div class="faq-list">
+                    <details open>
+                        <summary>What is BrandLens?</summary>
+                        <p>A tool for checking marketing content against brand rules configured by a company.</p>
+                    </details>
+                    <details>
+                        <summary>Who is BrandLens for?</summary>
+                        <p>Brand managers, marketing teams, and content creators who want a clearer way to work with
+                            brand guidelines.</p>
+                    </details>
+                    <details>
+                        <summary>What can BrandLens check?</summary>
+                        <p>It can flag configured prohibited phrases and mismatches with approved product facts and
+                            prices.</p>
+                    </details>
+                    <details>
+                        <summary>Does BrandLens automatically approve content?</summary>
+                        <p>No. BrandLens explains potential issues and leaves the final review decision to people.</p>
+                    </details>
+                    <details>
+                        <summary>Do I need technical knowledge to use it?</summary>
+                        <p>No. The workflow is designed to make brand rules and content checks easy to understand.</p>
+                    </details>
+                    <details>
+                        <summary>Can my team use its own brand guidelines?</summary>
+                        <p>Yes. Teams can define the rules and approved details they want BrandLens to check.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="closing-section">
+            <div class="closing-inner">
+                <p class="eyebrow">Your brand, clearly</p>
+                <h2>Make every message count.</h2>
+                <p>Bring your brand rules and marketing content into one clearer review workflow.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="creator.html">Start Checking Content <span
+                            aria-hidden="true">→</span></a>
+                    <a class="button button-secondary" href="#brand-manager">Explore Brand Manager <span
+                            aria-hidden="true">→</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a class="brand" href="#"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48"
+                            fill="none">
+                            <rect x="3" y="3" width="42" height="42" rx="13" fill="currentColor" />
+                            <circle cx="21" cy="20" r="8" stroke="white" stroke-width="3.5" />
+                            <path d="m27 26 7 7" stroke="white" stroke-width="3.5" stroke-linecap="round" />
+                        </svg></span><span>BrandLens</span></a>
+                <p>A clearer way to bring brand rules and marketing content together.</p>
+            </div>
+            <div class="footer-column"><strong>Product</strong><a href="brand.html">Brand Manager</a><a
+                    href="creator.html">Content Creator</a></div>
+            <div class="footer-column"><strong>Page</strong><a href="#about">About</a><a href="#how-it-works">How It
+                    Works</a><a href="#benefits">Benefits</a><a href="#faq">FAQ</a></div>
+        </div>
+        <div class="footer-bottom"><span>© 2026 BrandLens.</span><span>Built for clearer brand communication.</span>
+        </div>
+    </footer>
+    <script src="brandlens-data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
